@@ -1,0 +1,205 @@
+<html>
+<head>
+  <title>events information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+    }
+    h1 {
+      background-color:rgba(12, 12, 74, 0.623);
+      text-align: center;
+      color: whitesmoke;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .container {
+      background-color: rgba(12, 12, 74, 0.623);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background-color: #ffffff;
+      border: 8px solid gold;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      font-size: 16px;
+      transition: transform 0.3s; opacity: 0;animation: floatUp 1.5s ease forwards}
+      @keyframes floatUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;}
+          }
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s;}
+    .card:nth-child(3) { animation-delay: 0.6s;}
+    .card:nth-child(4) { animation-delay: 0.8s; }
+    .card:nth-child(5) { animation-delay: 1s; }
+    .card:nth-child(6) { animation-delay: 1.2s; }
+        .card:hover {transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin: 10px;
+      color: black;
+    }
+    .card p {
+      font-weight: 500;
+      margin: 10px;
+      background-color: lightyellow;
+      color: rgb(238, 5, 5);
+      padding: 5px;
+      border-radius: 6px;
+    }
+    .register-btn {
+      background-color: #03033f;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .register-btn:hover {
+      background-color:gold;
+    }
+    
+    .form-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 12px solid gold;
+      border-radius: 12px;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+    .form-popup input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form-popup button {
+      background-color: rgb(6, 6, 75);
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .form-popup button:hover {
+      background-color : gold;
+    }
+  </style>
+</head>
+<body>
+    <h1>🎉 Diwali Events 🎉</h1>
+  <div class="container">
+    <div class="card">🪔 Diya Lighting Ceremony🪔</div>
+    <div class="card">🎨 Rangoli Competition🎨</div>
+    <div class="card">💃 Dance Performances💃</div>
+    <div class="card">🎶 Live Music🎶</div>
+    <div class="card">🍴 Food Stalls🍴</div>
+    <div class="card">📸 Photobooths📸</div>
+  </div>
+        <div class="container">
+            <div class="header">
+                <h1><i>Events during Diwali Celebration Night</i></h1>
+            </div>
+  <div class="container">
+    <div class="card">
+      <h3>Diya Lighting Ceremony</h3>
+      <img src="D:/web dev/diya.jpg">
+      <p>Join us for a beautiful diya lighting ceremony to illuminate the night and spread joy.</p>
+      <button class="register-btn" onclick="openForm('Diya Lighting Ceremony')">Register</button>
+    </div>
+
+    <div class="card">
+      <h3>Rangoli Competition</h3>
+      <img src="D:/web dev/rangoli.webp">
+      <p>Showcase your creativity in our rangoli competition with exciting prizes for the best designs.</p>
+      <button class="register-btn" onclick="openForm('Rangoli Competition')">Register</button>
+    </div>
+
+    <div class="card">
+      <h3>Cultural Dance Performances</h3>
+      <img src="D:/web dev/dance.webp">
+      <p>Enjoy vibrant dance performances showcasing traditional and contemporary styles.</p>
+      <button class="register-btn" onclick="openForm('Dance Performances')">Register</button>
+    </div>
+
+  <div class="card">
+    <h3>Food Stalls</h3>
+    <img src="D:/web dev/food.avif">
+    <p>Savor delicious festive treats and traditional Diwali sweets at our food stalls.</p>
+    <button class="register-btn" onclick="openForm('Food Stalls')">Register</button>
+  </div>
+  <div class="card">
+    <h3>Live Music</h3>
+    <img src="D:/web dev/livemusic.png">
+    <p>Experience the joy of live music performances featuring traditional and contemporary tunes.</p>
+    <button class="register-btn" onclick="openForm('Live Music')">Register</button>
+  </div>
+  <div class="card">
+    <h3>Photobooths</h3>
+    <img src="D:/web dev/photobooth.avif">
+    <p>Capture memorable moments with friends and family at our themed photobooths.</p>
+    <button class="register-btn" onclick="openForm('Photobooths')">Register</button>
+  </div>
+</div>
+  <div class="form-popup" id="registerForm">
+    <h2>Event Registration</h2>
+    <form>
+      <label>Event:</label>
+      <input type="text" id="eventName" readonly>
+      <label>Name:</label>
+      <input type="text" placeholder="Enter your name" required>
+      <label>Phone Number:</label>
+      <input type="tel" placeholder="Enter your phone number" required>
+      <label>Email:</label>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Submit</button>
+      <button type="button" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+  <script>
+    function openForm(eventName) {
+      document.getElementById("registerForm").style.display = "block";
+      document.getElementById("eventName").value = eventName;
+    }
+    function closeForm() {
+      document.getElementById("registerForm").style.display = "none";
+    }
+  </script>
+</body>
+</html>
